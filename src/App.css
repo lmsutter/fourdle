@@ -1,38 +1,203 @@
-.App {
-  text-align: center;
+body {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background: rgb(35,36,41);
+  /* background: linear-gradient(324deg, rgba(35,36,41,1) 0%, rgb(69, 75, 78) 100%); */
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(230, 230, 230);
+  padding-top: 1em;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  border: none;
+  color:rgb(190, 189, 189);
+  border-radius: .5em;
+  background-color:rgb(60, 74, 112); 
+
+  padding: 10px;
+  font-size: 1.7rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.loserModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  background-color: rgb(46, 47, 56);
+  margin: 0 auto;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loserModal button:first-of-type {
+  margin-bottom: 1em;
 }
+
+.inputLetter {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 2px solid rgb(60, 74, 112);
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+  color:rgb(210, 215, 219);
+}
+
+.row {
+  display: flex;
+}
+
+.correct {
+  background: rgb(53, 97, 53);
+  background: repeating-linear-gradient(#3f5f4c, #3f5f4c 10px, #142b1f 10px, #142b1f 25px);
+}
+
+.wspot {
+  background-color: rgb(112, 112, 52);
+  background: repeating-linear-gradient(45deg, rgb(112, 112, 52), rgb(112, 112, 52) 10px, rgb(68, 68, 28) 10px, rgb(68, 68, 28) 25px);
+}
+
+.wrong {
+  background-color: rgb(82, 46, 56);
+  background: repeating-linear-gradient(-45deg, rgb(82, 46, 56), rgb(82, 46, 56) 10px, rgb(53, 27, 34) 10px, rgb(53, 27, 34) 25px);
+
+}
+
+.letters {
+  width: 90vw;
+  max-width: 100%;
+  display: grid;
+  padding: 5px;
+  grid-template-columns: repeat(10, minmax(35px, calc((100%-36px)/10)));
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 4px;
+  row-gap: 4px;
+  grid-template-areas: 
+    "Q W E R T Y U I O P"
+    "A S D F G H J K L ."
+    ". Z X C V B N M . . ";
+  margin-bottom: 1em;
+}
+
+.letters * {
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.delete-submit:first-of-type {
+  margin-right: 1em;
+}
+
+
+.Q {
+  grid-area: Q;
+}
+
+.W {
+  grid-area: W;
+}
+
+.E {
+  grid-area: E;
+}
+
+
+.R {
+  grid-area: R;
+}
+
+
+.T {
+  grid-area: T;
+}
+
+.Y {
+  grid-area: Y;
+}
+
+.U {
+  grid-area: U;
+}
+
+.I {
+  grid-area: I;
+}
+
+.O {
+  grid-area: O;
+}
+
+.P {
+  grid-area: P;
+}
+.A {
+  grid-area: A;
+}
+.S {
+  grid-area: S;
+}
+.D {
+  grid-area: D;
+}
+.F {
+  grid-area: F;
+}
+.G {
+  grid-area: G;
+}
+.H {
+  grid-area: H;
+}
+.J {
+  grid-area: J;
+}
+.K {
+  grid-area: K;
+}
+.L {
+  grid-area: L;
+}
+.Z {
+  grid-area: Z;
+}
+.X {
+  grid-area: X;
+}
+.C {
+  grid-area: C;
+}
+.V {
+  grid-area: V;
+}
+.B {
+  grid-area: B;
+}
+.N {
+  grid-area: N;
+}
+.M {
+  grid-area: M;
+}
+
+
+
+
+
