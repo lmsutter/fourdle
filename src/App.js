@@ -7,12 +7,6 @@ import fourLetterWords from './data/words';
 
 import { useState, useEffect } from 'react';
 
-/* 
-Todo: 
- - design you lost modal
- - set functionality so you can copy [4]dle Streak: streak keycap
-*/
-
 
 const keyLetters = "QWERTYUIOPASDFGHJKLZXCVBNM"
 const keyMap = new Map()
